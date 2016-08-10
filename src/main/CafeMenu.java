@@ -4,9 +4,10 @@ import java.util.Hashtable;
 import java.util.Iterator;
 
 public class CafeMenu implements Menu{
-    Hashtable menuItems = new Hashtable();
+    Hashtable menuItems;
 
     public CafeMenu() {
+        this.menuItems = new Hashtable();
     }
 
     public void addItem(String name, String description, boolean vegetarian, double price) {
