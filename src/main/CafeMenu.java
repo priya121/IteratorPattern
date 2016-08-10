@@ -1,23 +1,21 @@
 package main;
 
-import java.util.*;
+import java.util.Hashtable;
 import java.util.Iterator;
 
-public class PancakeHouseMenu implements Menu {
-    ArrayList menuItems;
+public class CafeMenu implements Menu{
+    Hashtable menuItems = new Hashtable();
 
-    public PancakeHouseMenu() {
-        this.menuItems = new ArrayList();
+    public CafeMenu() {
     }
 
     public void addItem(String name, String description, boolean vegetarian, double price) {
         MenuItem menuItem = new MenuItem(name, description, vegetarian, price);
-        menuItems.add(menuItem);
+        menuItems.put(menuItem.getName(), menuItem);
     }
 
+    @Override
     public Iterator createIterator() {
-        return menuItems.iterator();
+        return menuItems.values().iterator();
     }
 }
-
-
