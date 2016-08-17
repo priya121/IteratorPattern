@@ -26,7 +26,7 @@ public abstract class MenuComponent {
         throw new UnsupportedOperationException();
     }
 
-    public boolean isVegatarian() {
+    public boolean isVegetarian() {
         throw new UnsupportedOperationException();
     }
 
