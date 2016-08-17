@@ -1,10 +1,10 @@
 package main;
 
-public class MenuItem {
-    String name;
-    String description;
-    boolean vegetarian;
-    double price;
+public class MenuItem extends MenuComponent {
+    private final String name;
+    private final String description;
+    private final boolean vegetarian;
+    private final double price;
 
     public MenuItem(String name, String description, boolean vegetarian, double price) {
         this.name = name;
@@ -27,5 +27,19 @@ public class MenuItem {
 
     public boolean isVegetarian() {
         return vegetarian;
+    }
+
+    public String show() {
+        return "\n" + getName() +
+                "\n " + showIfVeg(isVegetarian()) +
+                "\n " + getPrice() +
+                "\n--" + getDescription() + "\n";
+    }
+
+    public String showIfVeg(boolean isVegetarian) {
+        if (isVegetarian) {
+            return "V";
+        }
+        return "";
     }
 }
