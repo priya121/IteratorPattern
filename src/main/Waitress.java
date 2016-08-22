@@ -14,9 +14,9 @@ public class Waitress {
     }
 
     public String printMenu() {
-        Iterator pancakeIterator = pancakeHouseMenu.createIterator();
-        Iterator dinerIterator = dinerMenu.createIterator();
-        Iterator cafeMenuIterator = cafeMenu.createIterator();
+        Iterator pancakeIterator = pancakeHouseMenu.createMenuItemIterator();
+        Iterator dinerIterator = dinerMenu.createMenuItemIterator();
+        Iterator cafeMenuIterator = cafeMenu.createMenuItemIterator();
 
         return "Breakfast" + "\n" +
                 printItems(pancakeIterator) + "\n" +

@@ -22,7 +22,7 @@ public class DinerMenu implements Menu {
             }
         }
 
-        public Iterator createIterator() {
+        public Iterator createMenuItemIterator() {
             return new DinerMenuIterator(menuItems);
         }
 
